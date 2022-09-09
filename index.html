@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" placeholder="so c" id="soc"/> -->
+    
+    <script>
+        var soa = document.createElement("input");
+        soa.setAttribute('placeholder','so a')
+        document.body.appendChild(soa);
+        soa.setAttribute('id','soa');
+        var br = document.createElement("br");
+        document.body.appendChild(document.createTextNode(' + '));
+       
+        var sob = document.createElement("input");
+        sob.setAttribute('placeholder','so b')
+        document.body.appendChild(sob);
+        sob.setAttribute('id','sob');
+
+        var btn = document.createElement("input");
+        btn.setAttribute('type','button');
+        btn.setAttribute('value','Click');
+        document.body.appendChild(btn);
+        document.body.appendChild(br);
+        var text=document.createTextNode('Tổng 2 số = ');
+        document.body.appendChild(text);
+
+        var span =document.createElement("span");
+        document.body.appendChild(span);
+        btn.onclick=function(){
+            var a =parseInt(document.getElementById('soa').value) ;
+            var b =parseInt(document.getElementById('sob').value) ;
+            var c = a+b;
+            span.innerHTML =c;
+           
+        };
+
+    </script>
+</body>
+</html>
